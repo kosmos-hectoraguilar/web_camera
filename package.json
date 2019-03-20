@@ -1,0 +1,18 @@
+{
+  "name": "opencvjs-getting-started-with-videos-adapted",
+  "version": "1.0.0",
+  "description": "click \"Open in New Window\" to use your camera; adapted from https://docs.opencv.org/3.4/dd/d00/tutorial_js_video_display.html",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "opencv.js": "1.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "7.2.0",
+    "parcel-bundler": "^1.6.1"
+  },
+  "keywords": []
+}
