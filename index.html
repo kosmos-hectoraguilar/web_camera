@@ -2,23 +2,8 @@
 <html>
   <head>
     <title>opencv.js sandbox</title>
-    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="manifest" href="manifest.json">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/JavaScript">
-      const screenshotButton = document.querySelector('#screenshot-button');
-      const video = document.querySelector('#screenshot videoInput');
-
-      screenshotButton.onclick = video.onclick = function() {
-        var canvas = document.createElement('canvas');
-        canvas.width = video.videoWidth;
-        canvas.height = video.videoHeight;
-        canvas.getContext('2d').drawImage(video, 0, 0);
-        // Other browsers will fall back to image/png
-        img.src = canvas.toDataURL('image/webp');
-        video.pause();
-        screenshotButton.disabled = false;
-      };
-    </script>
     <style>
       html,
       body {
@@ -57,10 +42,15 @@
         z-index: 10;
         background-color: #99000000;
       }
+
+      #alert {
+        color: white;
+      }
     </style>
   </head>
 
   <body>
+    <strong id="alert"></strong>
     <div id="mydiv">
       <div id="buttonDiv" style="background-color: black;">
         <button id="screenshot-button" style="background: url(take_photo.png); width: 100px; height: 100px; background-size: 100px; border: 0px;"/>
