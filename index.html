@@ -46,6 +46,19 @@
       #alert {
         color: white;
       }
+
+      #snap{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+        display: none;
+      }
+
+      .app canvas{
+    display: none;
+}
     </style>
   </head>
 
@@ -64,6 +77,8 @@
             width="32"
           />
         </div>
+        <canvas></canvas>
+        <img id="snap">
       </div>
     </div>
     <script src="src/camera.js"></script>
